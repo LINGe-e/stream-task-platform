@@ -1,0 +1,35 @@
+services:
+  oceanbase:
+    image: quay.io/oceanbase/oceanbase-ce:latest
+    restart: unless-stopped
+    mem_limit: 8g
+    shm_size: '1gb'
+    ulimits:
+      nofile:
+        soft: 655350
+        hard: 655350
+      stack:
+        soft: -1
+        hard: -1
+    environment:
+      MODE: slim
+      OB_TENANT_PASSWORD: ${OCEANBASE_PASSWORD}
+      OB_MEMORY_LIMIT: 6G
+      OB_SYSTEM_MEMORY: 512M
+    volumes:
+      - oceanbase-data:/root/ob
+      - oceanbase-cluster:/root/.obd/cluster
+    ports:
+      - "127.0.0.1:2881:2881"
+    expose:
+      - "2886"
+    networks: [a22]
+
+networks:
+  a22:
+    name: a22
+
+volumes:
+  oceanbase-data:
+  oceanbase-cluster:
+

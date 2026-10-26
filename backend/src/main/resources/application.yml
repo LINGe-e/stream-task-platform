@@ -1,0 +1,60 @@
+server:
+  port: ${SERVER_PORT:8080}
+spring:
+  application:
+    name: a22-stream-task-platform
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3307/a22?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  jackson:
+    encoding: UTF-8
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      repositories:
+        enabled: false
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:127.0.0.1:9092}
+app:
+  ai:
+    provider: ${A22_AI_PROVIDER:aliyun-bailian}
+    model: ${A22_AI_MODEL:qwen-plus}
+    endpoint: ${A22_AI_ENDPOINT:https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions}
+    api-key: ${AI_API_KEY:}
+  upload:
+    max-records: 100000
+  export:
+    directory: ${APP_EXPORT_DIR:./a22-exports}
+  flink:
+    rest-url: ${FLINK_REST_URL:http://127.0.0.1:8081}
+    job-jar: ${FLINK_JOB_JAR:D:/a22(3)/a22/flink-jobs/target/flink-jobs-1.0-SNAPSHOT.jar}
+    bootstrap-servers: ${FLINK_BOOTSTRAP_SERVERS:${KAFKA_BOOTSTRAP_SERVERS:127.0.0.1:9092}}
+    source-topic: ${FLINK_SOURCE_TOPIC:a22-transactions}
+    target-table: ${FLINK_TARGET_TABLE:flink_output}
+    mysql-url: ${FLINK_MYSQL_URL:${SPRING_DATASOURCE_URL:jdbc:mysql://127.0.0.1:3307/a22?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai}}
+    mysql-username: ${FLINK_MYSQL_USERNAME:${SPRING_DATASOURCE_USERNAME:root}}
+    mysql-password: ${FLINK_MYSQL_PASSWORD:${SPRING_DATASOURCE_PASSWORD:}}
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:127.0.0.1:9092}
+  hdfs:
+    default-fs: ${HDFS_DEFAULT_FS:file:///}
+  s3:
+    default-endpoint: ${S3_ENDPOINT:http://localhost:9000}
+    default-region: ${S3_REGION:us-east-1}
+  datasource:
+    encryption-key: ${A22_DATASOURCE_ENCRYPTION_KEY:a22-local-datasource-key}

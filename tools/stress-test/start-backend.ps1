@@ -1,0 +1,7 @@
+$ErrorActionPreference = "Stop"
+$env:SPRING_PROFILES_ACTIVE = "local"
+$env:SPRING_DATASOURCE_URL = "jdbc:h2:file:./data/a22-stress;MODE=MySQL;DATABASE_TO_LOWER=TRUE;CASE_INSENSITIVE_IDENTIFIERS=TRUE;AUTO_COMPACT_FILL_RATE=0;REUSE_SPACE=FALSE"
+$env:SPRING_DATASOURCE_USERNAME = "sa"
+$env:SPRING_DATASOURCE_PASSWORD = ""
+Set-Location "D:\a22\backend"
+& mvn spring-boot:run *> "D:\a22\backend-stress-run.log"

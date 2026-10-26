@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vmware-workstation-mcp"
+version = "0.1.0"
+description = "Minimal, confirmation-gated MCP server for VMware Workstation"
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.0,<3.0"]
+
+[project.scripts]
+vmware-workstation-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server"]

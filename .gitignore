@@ -1,0 +1,52 @@
+# Build outputs and local dependencies
+**/target/
+**/.venv/
+__pycache__/
+frontend/node_modules/
+frontend/dist/
+
+# Local credentials and editor files
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+*.iml
+
+# Runtime logs
+*.log
+
+# Local databases and database backups
+backend/data/*.mv.db
+backend/data-backup-*/
+backend/**/recovery-backup-*/
+backend/exports/
+backend/hdfs-data/
+
+# ScholarFlow and local workspace metadata
+.codex/
+.scholarflow/
+
+# Generated, inspection, and temporary workspace output
+generated/
+outputs/
+work/
+inspect_media_current/
+inspect_media_reference/
+media_extract/
+preview_S2C/
+state_machine_output/
+
+# Local project configuration
+db-config.txt
+**/db-config.txt
+backend/src/main/resources/application-local.yml
+
+# One-off local scripts and generated tool output
+tools/err.txt
+tools/out.txt
+tools/temp-*.patch
+tools/hello.*
+tools/patch_*.cjs
+tools/render_docx_word.py
+tools/run_apply.py

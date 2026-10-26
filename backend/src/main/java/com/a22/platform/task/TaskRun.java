@@ -1,0 +1,71 @@
+package com.a22.platform.task;
+
+import java.time.Instant;
+
+public record TaskRun(
+        Long id,
+        Long taskId,
+        String taskName,
+        String status,
+        Integer recordsRead,
+        Integer recordsWritten,
+        String targetTable,
+        String errorMessage,
+        String failureNodeId,
+        String failureNodeLabel,
+        String failureNodeType,
+        String triggerType,
+        Integer retryAttempt,
+        Instant nextRunAt,
+        Boolean maxRetriesReached,
+        String incrementalMode,
+        Integer incrementalInputCount,
+        Integer incrementalWrittenCount,
+        Integer duplicateSkippedCount,
+        String cursorField,
+        String lastCursorBefore,
+        String lastCursorAfter,
+        Integer processedMarkedCount,
+        String logsJson,
+        String branchResultsJson,
+        String nodeResultsJson,
+        Long executorId,
+        String executorUsername,
+        Instant startedAt,
+        Instant finishedAt
+) {
+    public static TaskRun fromEntity(TaskRunEntity entity) {
+        return new TaskRun(
+                entity.getId(),
+                entity.getTaskId(),
+                entity.getTaskName(),
+                entity.getStatus(),
+                entity.getRecordsRead(),
+                entity.getRecordsWritten(),
+                entity.getTargetTable(),
+                entity.getErrorMessage(),
+                entity.getFailureNodeId(),
+                entity.getFailureNodeLabel(),
+                entity.getFailureNodeType(),
+                entity.getTriggerType(),
+                entity.getRetryAttempt(),
+                entity.getNextRunAt(),
+                entity.getMaxRetriesReached(),
+                entity.getIncrementalMode(),
+                entity.getIncrementalInputCount(),
+                entity.getIncrementalWrittenCount(),
+                entity.getDuplicateSkippedCount(),
+                entity.getCursorField(),
+                entity.getLastCursorBefore(),
+                entity.getLastCursorAfter(),
+                entity.getProcessedMarkedCount(),
+                entity.getLogsJson(),
+                entity.getBranchResultsJson(),
+                entity.getNodeResultsJson(),
+                entity.getExecutorId(),
+                entity.getExecutorUsername(),
+                entity.getStartedAt(),
+                entity.getFinishedAt()
+        );
+    }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "transaction_id": "TX202607120001",
+    "customer_id": "C10001",
+    "customer_name": "张晓明",
+    "amount": 1288.50,
+    "currency": "CNY",
+    "status": "SUCCESS",
+    "transaction_time": "2026-07-12T09:15:30+08:00",
+    "channel": "MOBILE_BANK",
+    "risk_tags": ["NORMAL", "NEW_DEVICE"],
+    "metadata": { "city": "上海", "device_id": "DEV-8F31A" }
+  },
+  {
+    "transaction_id": "TX202607120002",
+    "customer_id": "C10002",
+    "customer_name": "李雨桐",
+    "amount": 99.90,
+    "currency": "CNY",
+    "status": "PENDING",
+    "transaction_time": "2026-07-12T09:18:42+08:00",
+    "channel": "WEB_BANK",
+    "risk_tags": ["REVIEW"],
+    "metadata": { "city": "杭州", "device_id": "DEV-3BC91" }
+  },
+  {
+    "transaction_id": "TX202607120003",
+    "customer_id": "C10003",
+    "customer_name": "王晨",
+    "amount": 5600.00,
+    "currency": "CNY",
+    "status": "SUCCESS",
+    "transaction_time": "2026-07-12T09:22:11+08:00",
+    "channel": "ATM",
+    "risk_tags": [],
+    "metadata": { "city": "北京", "device_id": "ATM-2208" }
+  }
+]

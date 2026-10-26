@@ -1,0 +1,10 @@
+{"order_id":"ORD001","customer_id":"C1001","product_name":"笔记本电脑","category":"电子产品","quantity":1,"unit_price":5999.00,"total_amount":5999.00,"city":"上海","payment":"支付宝","order_time":"2026-08-02 09:15:00"}
+{"order_id":"ORD002","customer_id":"C1002","product_name":"无线耳机","category":"电子产品","quantity":2,"unit_price":299.00,"total_amount":598.00,"city":"北京","payment":"微信","order_time":"2026-08-02 09:32:00"}
+{"order_id":"ORD003","customer_id":"C1003","product_name":"运动鞋","category":"运动户外","quantity":1,"unit_price":659.00,"total_amount":659.00,"city":"深圳","payment":"信用卡","order_time":"2026-08-02 10:05:00"}
+{"order_id":"ORD004","customer_id":"C1004","product_name":"咖啡机","category":"家用电器","quantity":1,"unit_price":1280.00,"total_amount":1280.00,"city":"广州","payment":"支付宝","order_time":"2026-08-02 10:18:00"}
+{"order_id":"ORD005","customer_id":"C1005","product_name":"Python编程书","category":"图书","quantity":3,"unit_price":89.00,"total_amount":267.00,"city":"杭州","payment":"微信","order_time":"2026-08-02 10:45:00"}
+{"order_id":"ORD006","customer_id":"C1001","product_name":"机械键盘","category":"电子产品","quantity":1,"unit_price":399.00,"total_amount":399.00,"city":"上海","payment":"支付宝","order_time":"2026-08-02 11:02:00"}
+{"order_id":"ORD007","customer_id":"C1006","product_name":"瑜伽垫","category":"运动户外","quantity":2,"unit_price":128.00,"total_amount":256.00,"city":"成都","payment":"微信","order_time":"2026-08-02 11:30:00"}
+{"order_id":"ORD008","customer_id":"C1007","product_name":"空气炸锅","category":"家用电器","quantity":1,"unit_price":459.00,"total_amount":459.00,"city":"武汉","payment":"信用卡","order_time":"2026-08-02 12:15:00"}
+{"order_id":"ORD009","customer_id":"C1003","product_name":"防晒霜","category":"美妆护肤","quantity":5,"unit_price":79.00,"total_amount":395.00,"city":"深圳","payment":"支付宝","order_time":"2026-08-02 13:20:00"}
+{"order_id":"ORD010","customer_id":"C1008","product_name":"蓝牙音箱","category":"电子产品","quantity":1,"unit_price":349.00,"total_amount":349.00,"city":"西安","payment":"微信","order_time":"2026-08-02 14:05:00"}

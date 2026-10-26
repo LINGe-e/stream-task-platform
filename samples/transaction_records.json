@@ -1,0 +1,4 @@
+[
+  {"transaction_id":"T20260001","customer_id":"C001","amount":120.50,"status":"SUCCESS"},
+  {"transaction_id":"T20260002","customer_id":"C002","amount":88.00,"status":"PENDING"}
+]

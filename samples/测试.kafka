@@ -1,0 +1,5 @@
+{"transaction_id":"TXN101","customer_id":"C2001","customer_name":"测试A","amount":999.99,"city":"南京","timestamp":"2026-08-01 11:00:00"}
+{"transaction_id":"TXN102","customer_id":"C2002","customer_name":"测试B","amount":1888.00,"city":"成都","timestamp":"2026-08-01 11:01:00"}
+{"transaction_id":"TXN103","customer_id":"C2003","customer_name":"测试C","amount":666.66,"city":"武汉","timestamp":"2026-08-01 11:02:00"}
+{"transaction_id":"TXN104","customer_id":"C2004","customer_name":"测试D","amount":4520.00,"city":"重庆","timestamp":"2026-08-01 11:03:00"}
+{"transaction_id":"TXN105","customer_id":"C2005","customer_name":"测试E","amount":735.50,"city":"西安","timestamp":"2026-08-01 11:04:00"}
